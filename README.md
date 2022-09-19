@@ -13,15 +13,18 @@ See [Syntax](syntax.md) for further details.
 
 
 # Map Elements
-* [Component](Component.md)
-* [Anchor](Anchor.md)
-* [Link](Link.md)
-* [Movement](Movement.md)
-* [Inertia](Inertia.md)
-* [Pipeline](Pipeline.md)
-* [Map Metadata](Map%20Metadata.md)
+
+* [Component](expressions/Component.md)
+* [Anchor](expressions/Anchor.md)
+* [Link](expressions/Link.md)
+* [Movement](expressions/Movement.md)
+* [Inertia](expressions/Inertia.md)
+* [Pipeline](expressions/Pipeline.md)
+* [Map Metadata](expressions/Map%20Metadata.md)
+
 # Grammar elements
-* [Identifier](Identifier.md)
-* [Position](Position.md)
-* [Text](Text.md)
+
+* [Identifier](tokens/Identifier.md)
+* [Position](tokens/Position.md)
+* [Text](tokens/Text.md)
 

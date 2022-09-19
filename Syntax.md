@@ -14,7 +14,7 @@ e.g:
 	component Cup [0.73, 0.78]
 
 # Token
-A token is a part of an expression. A token represents a symbol of the grammar where each symbol is of a given type, e.g. _[Identifier](Identifier.md)  
+A token is a part of an expression. A token represents a symbol of the grammar where each symbol is of a given type, e.g. *[Identifier](tokens/Identifier.md)*  
 
 The above expression consists of three Tokens:
 * component
