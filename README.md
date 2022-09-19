@@ -1,18 +1,23 @@
-The Wardley Map description language (WMDL) is based on the grmmar used by Onlinewardleymaps.com. Though widely used an capable of basically  describing Wardley Maps the grammar itself lacks desirable features and is not described formally. 
+# WMDL - Wardley Mapping Description Language
 
-In order to allow for tool developers to create interoperable software systems a standardized language is needed. There fore the OWM grammar should be formalized and extended to form a standard. 
+The Wardley Map description language (WMDL) is based on the grammar used by Onlinewardleymaps.com. 
+Though widely used and capable of basically describing Wardley Maps, the OWM grammar itself lacks desirable features
+and is not yet described formally. 
 
-The WMDL should be used as a description language as well as an interchangeable format.
+In order to allow for tool developers to create interoperable software systems, 
+a standardized language is needed. WMDL aims to become that standard by building upon the foundation of OWM. 
 
-# Enhancements to the OWM grammar
-* OWM does not support additional data on map elements, e.g. data for further analysis like the cost of a component. WMDL should offer this. The suggested format is to have a json-like key-value structure, e.g.:
+WMDL should be used as a description language as well as an interchangeable format. 
 
-		component foo [0.75, 0.6] {cost: 123.0, technology: 'existent'};
+See [Syntax](Syntax.md) for further details.
 
-See [Syntax](syntax.md) for further details.
+## Key features:
+* Standardized language: Tools using WMDL should be able to produce interchangeable output such that toolchains consisting of various tools created b the community can be created
+* Human readable: WMDL should be easily to write an understand by humans. Ultimately it should be usable in visual editors to quickly produce maps, e.g. in a collaborative mapping session
+* Support for optional visual aids, e.g. advice on how to display a certain component in a visual editor (shape, color, ...)
+* Support for optional data on map elements. Additional (meta) data can be used with structured queries and analysis.
 
-
-# Map Elements
+## Map Elements
 
 * [Component](expressions/Component.md)
 * [Anchor](expressions/Anchor.md)
@@ -22,7 +27,7 @@ See [Syntax](syntax.md) for further details.
 * [Pipeline](expressions/Pipeline.md)
 * [Map Metadata](expressions/Map%20Metadata.md)
 
-# Grammar elements
+## Grammar elements
 
 * [Identifier](tokens/Identifier.md)
 * [Position](tokens/Position.md)
