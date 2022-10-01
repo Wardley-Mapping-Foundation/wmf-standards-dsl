@@ -70,10 +70,22 @@ Specific x & y coordinates MUST be specified using the same formats described ab
 If a dimension is not specified, the same dimension of the map element's parent SHOULD be used if available.
 
 ## 2. relative coordinates
-Relative x & y coordinates MUST be specified using an extended the same formats described above.
-x,y 
+Relative x & y coordinates MUST be specified using the same formats described above, with the addition of:
+
+ - `+` specified increment
+ - `-` specified decrement
+
+E.g.:
+
+    x: +3, y: -2
+    [+3,-2]
 
 If a dimension is not specified, the same dimension of the map element's parent SHOULD be used if available.
+E.g.:
+
+    [+3]
+
+The `x` coordinate should be determined as `parent.x + 3`, whereas the `y` coordinate should be `parent.y`.
 
 ## 3. relative horizontal & vertical alignment
 
