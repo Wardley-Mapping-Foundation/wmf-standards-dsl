@@ -8,10 +8,10 @@ It is expressed linearly on a single axis of four (4) stages:
 
 | Stage                                   |      I     |     II     |         III         |            IV          |
 |-----------------------------------------|------------|------------|---------------------|------------------------|
-| [Activity](../expression/activity.md)   | Genesis    | Custom     | Product _(+Rental)_ | Commodity _(+Utility)_ |
-| [Practice](../expression/practice.md)   | Novel      | Emerging   | Good                | Best                   |
-| [Data](../expression/data.md)           | Unmodelled | Divergent  | Convergent          | Modelled               |
-| [Knowledge](../expression/knowledge.md) | Concept    | Hypothesis | Theory              | Accepted               |
+| [Activity](../expression/Activity.md)   | Genesis    | Custom     | Product _(+Rental)_ | Commodity _(+Utility)_ |
+| [Practice](../expression/Practice.md)   | Novel      | Emerging   | Good                | Best                   |
+| [Data](../expression/Data.md)           | Unmodelled | Divergent  | Convergent          | Modelled               |
+| [Knowledge](../expression/Knowledge.md) | Concept    | Hypothesis | Theory              | Accepted               |
 
 _Table 1. Based on: [Wardley Maps Chapter 2 - Finding a path](https://medium.com/wardleymaps/finding-a-path-cdb1249078c0)_
 
@@ -33,7 +33,7 @@ Evolution MAY be represented as a string from Table 1 representing a Stage, e.g.
  - "Commodity", "Commodity +Utility", "Utility", "Best", "Modelled", "Accepted"
 
 ## 3. Representing Evolution as a decimal number
-Evolution MAY be represented as a positive decimal number between 0.0 - 4.0 representing a Stage, where the decimal
+Evolution MAY be represented as a positive decimal number between 1.0 - 5.0 representing a Stage, where the decimal
 represents the approximate level of evolution within a Stage.
 
 The decimal MUST be interpreted by the ranges defined below:
@@ -48,7 +48,7 @@ The decimal value SHOULD be limited to a single place to avoid implying a false 
 
 Evolution MUST NOT be stored as a percentage or a coordinate on the x-axis.  While doing so may make it easier to calculate
 an x coordinate for display purposes, it makes it much harder for a human to both represent & interpret a component's stage
-of evolution.  [Position hints](position.md) should be used instead.
+of evolution.  [Position hints](Position.md) should be used instead.
 
 ## Evolution as x-axis of a map
 Evolution is typically used to define the x-axis of a Wardley map.  In this case, Evolution SHOULD be mapped onto the
@@ -63,7 +63,7 @@ Note that there may not be a 1:1 mapping between Stage coordinate and x coordina
 engine decides to place Stage boundaries at irregular intervals to maximise readability of a map.
 
 ### Determining position of a component on x-axis using Evolution
-Evolution is by nature an approximate estimation.  As such, when interpreted as a [Position](position.md) on the x-axis of
+Evolution is by nature an approximate estimation.  As such, when interpreted as a [Position](Position.md) on the x-axis of
 a map, the precise x co-ordinate SHOULD be approximated by the visualisation engine using the above mapping.
 Visualisation engines SHOULD attempt to avoid unnecessary clutter by preventing map components from overlapping.
 
