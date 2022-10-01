@@ -1,15 +1,17 @@
-# WMDL - Wardley Mapping Description Language
+# DRAFT - Wardley Mapping Description Language (WMDL) - DRAFT
 
-The Wardley Map description language (WMDL) is based on the grammar used by Onlinewardleymaps.com. 
-Though widely used and capable of basically describing Wardley Maps, the OWM grammar itself lacks desirable features
-and is not yet described formally. 
-
-In order to allow for tool developers to create interoperable software systems, 
-a standardized language is needed. WMDL aims to become that standard by building upon the foundation of OWM. 
-
-WMDL should be used as a description language as well as an interchangeable format. 
+The Wardley Mapping Description Language is based on [Simon Wardley's book](https://medium.com/wardleymaps) and subsequent revisions.  It provides a standard way of describing Wardley Maps that is user-friendly, accurate, extensible, and allows tool developers to create interoperable software systems.
 
 See [Syntax](Syntax.md) for further details.
+
+## User Needs
+TODO - copy appropriate user needs from Miro.  These should be high-level, not a detailed list of 100 requirements.  Ensure they have outcome statements, eg:
+
+    As a <user>
+    I need <some activity or thing>
+    So that <I can achieve this outcome>
+
+WMDL should be used as a description language as well as an interchangeable format.  *- TODO: reconsider.  It likely makes sense to have a separate standard data format that the description language depends on.  Bear in mind more than one language may emerge from the data format.*
 
 ## Key features:
 * Standardized language: Tools using WMDL should be able to produce interchangeable output such that toolchains consisting of various tools created b the community can be created
