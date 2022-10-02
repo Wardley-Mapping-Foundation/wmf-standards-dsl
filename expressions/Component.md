@@ -1,23 +1,45 @@
 # Component
 
-Components represent capabilities of within the mapped context. They are the major building blocks of maps. 
+Components represent the landscape of the map, and come in many different types.
 
 ## Syntax
-
 	
 ### WMDL
-	component <identifier> <position> <display-hints> <data>
+	<component-identifier> <evolution> <flows> <display-hints> <data>
+	-or-
+	<component-type> <component-identifier> <evolution> <flows> <display-hints> <data>
+
 
 e.g.
 
-	component Cup [0.73, 0.78]
-	component Cup [0.73, 0.78] {display:{icon:square, label:"[19, -4]"}} {data:{cost:1.34, currency: "EUR"}}
+	Tea [Stage III]
+
+	Cup [3.4] {
+	  needs: porcelain, mold, kiln [5]
+	}
+	
+	practice MTTR [4.1] {
+	  needs: asset, maintenance, statistics
+	  capital-flow: { rule: split-evenly }
+	  label: "Mean Time to Repair" position: top-left
+	  data: { link: "https://github.com/Wardley-Mapping-Foundation" }
+	  display: { icon:square }
+	}
+
+	capital PO123 [II] {
+	  capital-flow: MTTR[100%]
+	  data: {cost:1.34, currency: "EUR"}
+	  position: [23, 49]
+	}
 
 | Token                                   | Mandatory | Description                                                                                                           |
 |-----------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------|
-| component                               | y         | Identifies the expression type                                                                                        |
-| [identifier](../tokens/Identifier.md)   | y         | Name of the component, used as an identifier to allow references from other map elements                              |
-| [position](../tokens/Position.md)       | n         | Map coordinates of the component. If omitted [0, 0] is assumed.                                                       |
+| component-type                          | n         | Optional. Identifies the [type](Component Types.md) of component.  Defaults to [Activity](Activity.md)                |
+| [identifier](../tokens/Identifier.md)   | y         | Unique identifier to allow references from other map elements.  Doubles as _label_ unless specified.                  |
+| [evolution](../tokens/Evolution.md)     | y         | Evolution of the component.                                                                                           |
+| [flows](../tokens/Flow.md)              | n         | Optional, any **outflows** to other components, such as [Needs](Need.md) or [Capital](Capital.md).                    |
+| [future](../tokens/Future.md)           | n         | Optional, describes if this is component is anticipated for the future.  Defaults to `FALSE`.                         |
+| [position-hints](../tokens/Position.md) | n         | Optional, contains hints on how to [position](../tokens/Position.md) this component for visual tools.                 |
 | [display-hints](../tokens/display-hint) | n         | Optional, contains hints on how to display this component for visual tools, e.g. the desired shape for this component |
 | [data](../tokens/data)                  | n         | Optional, contains additional data that may be used in further analytics, e.g. to calculate the total cost of a flow. |
 
@@ -29,11 +51,11 @@ e.g.
 	component Cup [0.73, 0.78] label [19, -4]
 
 #### Differences to OWM
-* WMDL adds support for additional [data](../tokens/data.md)
-* WMDL adds support for visual tooling via [display hints](../tokens/display-hint.md). Shapes or icons can be defined for a components this way. 
-* Labels are defined through [display-hints](../tokens/display-hint.md) 
-
-
-
-
-
+WMDL...
+* groups flows with components
+* specifies [evolution](../tokens/Evolution.md) & [delta visibility](../tokens/Visibility.md), not x,y coordinates
+* supports multiple component types
+* supports multiple flows
+* supports relative positions
+* support additional [data](../tokens/data.md)
+* supports [display hints](../tokens/display-hint.md) for things like shapes, icons, colours, etc.
