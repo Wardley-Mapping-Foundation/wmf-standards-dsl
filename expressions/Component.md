@@ -1,14 +1,12 @@
 # Component
 
-Components represent the landscape of the map, and come in many different types.
+A network of components represents the landscape of the map (TODO: refer to Simon's book).  They come in many
+different [types](Component-Types.md).
 
 ## Syntax
-	
-### WMDL
 	<component-identifier> <evolution> <flows> <display-hints> <data>
 	-or-
 	<component-type> <component-identifier> <evolution> <flows> <display-hints> <data>
-
 
 e.g.
 
@@ -34,7 +32,7 @@ e.g.
 
 | Token                                   | Mandatory | Description                                                                                                           |
 |-----------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------|
-| component-type                          | n         | Optional. Identifies the [type](Component Types.md) of component.  Defaults to [Activity](Activity.md)                |
+| component-type                          | n         | Optional. Identifies the [type](Component-Types.md) of component.  Defaults to [Activity](Activity.md)                |
 | [identifier](../tokens/Identifier.md)   | y         | Unique identifier to allow references from other map elements.  Doubles as _label_ unless specified.                  |
 | [evolution](../tokens/Evolution.md)     | y         | Evolution of the component.                                                                                           |
 | [flows](../tokens/Flow.md)              | n         | Optional, any **outflows** to other components, such as [Needs](Need.md) or [Capital](Capital.md).                    |
@@ -43,14 +41,14 @@ e.g.
 | [display-hints](../tokens/display-hint) | n         | Optional, contains hints on how to display this component for visual tools, e.g. the desired shape for this component |
 | [data](../tokens/data)                  | n         | Optional, contains additional data that may be used in further analytics, e.g. to calculate the total cost of a flow. |
 
-### OWM
+## OWM Comparison
 	component <name> <position>
 e.g.
 
 	component Cup [0.73, 0.78]
 	component Cup [0.73, 0.78] label [19, -4]
 
-#### Differences to OWM
+### Differences to OWM
 WMDL...
 * groups flows with components
 * specifies [evolution](../tokens/Evolution.md) & [delta visibility](../tokens/Visibility.md), not x,y coordinates
