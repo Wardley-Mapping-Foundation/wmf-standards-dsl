@@ -16,8 +16,10 @@ Sources of inspiration:
 - Syntax: [tea-shop/onlinewardleymaps/tea-shop.owm](tea-shop/onlinewardleymaps/tea-shop.owm)
 - Rendered map: [tea-shop/onlinewardleymaps/tea-shop.png](tea-shop/onlinewardleymaps/tea-shop.png)
 - Url to the map: URL: https://onlinewardleymaps.com/#clone:PdfpxK7vyRHECcZarS
+- Url to the tool: https://onlinewardleymaps.com/
 
 ### wardleyToGo
 
 - Syntax: [tea-shop/wardleyToGo/tea-shop.txt](tea-shop/wardleyToGo/tea-shop.txt)
 - Rendered map: wardleyToGo/tea-shop.png
+- Url to the tool: https://github.com/owulveryck/wardleyToGo/blob/newdsl/parser/wtg/README.md
