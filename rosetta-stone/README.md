@@ -13,8 +13,11 @@ Sources of inspiration:
 
 ### onlinewardleymaps
 
-- Syntax: onlinewardleymaps/syntax.owm
-- Rendered map: onlinewardleymaps/tea-shop.png
+- Syntax: [onlinewardleymaps/syntax.owm](onlinewardleymaps/syntax.owm)
+- Rendered map: [onlinewardleymaps/tea-shop.png](onlinewardleymaps/tea-shop.png)
 - Url to the map: URL: https://onlinewardleymaps.com/#clone:PdfpxK7vyRHECcZarS
 
 ### wardleyToGo
+
+- Syntax: [wardleyToGo/syntax.owm](wardleyToGo/syntax.owm)
+- Rendered map: wardleyToGo/tea-shop.png
